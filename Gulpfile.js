@@ -13,12 +13,5 @@ gulp.task('build', () => {
 })
 
 gulp.task('dev', ['build'], () => {
-  gulp.watch('src/**/*.less', () => {
-      console.log('change');
-      return gulp.src('src/lightcss.less')
-		  	.pipe(plumber())
-		    .pipe(less())
-		    .pipe(autoprefixer())
-		    .pipe(gulp.dest('dist'));
-  })
+  gulp.watch('src/**/*.less', ['build'])
 })
