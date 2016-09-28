@@ -1,3 +1,116 @@
 /*
  * 通用布局类
  */
+
+ //namespace命名空间
+@ns: g-;
+
+.generate-columns(24);
+
+.generate-columns(@total, @i: 1) when (@i =< @total) {
+  .@{ns}col-@{i}-@{total} {
+    width: (@i * 100% / @total);
+    display: inline-block;
+    font-size: 16px;
+    vertical-align: top;
+  }
+  .generate-columns(@total, (@i + 1));
+}
+
+.@{ns}row {
+  font-size: 0;
+}
+
+// 两列右侧自适应布局adaptive:a, r: right: l: left, m: middle
+.@{ns}ar(@width) {
+  &-left {
+    float:left;
+    width:@width;
+    margin-right:-@width;
+  }
+  &-right {
+    float:right;
+    width:100%
+  }
+  &-right-content {
+    margin-left:@width;
+  }
+}
+
+// 两列左侧自适应布局
+.@{ns}al(@width) {
+  &-right {
+    float:right;
+    width:@width;
+    margin-left:-@width;
+  }
+  &-left {
+    float:left;
+    width:100%
+  }
+  &-right-content {
+    margin-right:@width;
+  }
+}
+
+//三列中间自适应布局
+.@{ns}am(@left-width, @right-width) {
+  &-left {
+    float: left;
+    width: @left-width;
+    margin-right: -@left-width;
+  }
+  &-right {
+    float: right;
+    width: @right-width;
+    margin-left: -@right-width;
+  }
+  &-middle {
+    width: 100%;
+    float: left;
+  }
+  &-middle-content {
+    margin-left: @left-width;
+    margin-right: @right-width;
+  }
+}
+
+//三列右侧自适应布局
+.@{ns}ar3(@width1, @width2) {
+  &-left-1 {
+    float: left;
+    width: @width1;
+  }
+  &-left-2 {
+    float: left;
+    width: @width2;
+  }
+  &-right {
+    float: right;
+    width: 100%;
+    margin-left: -@width1-@width2;
+  }
+  &-right-content {
+    margin-left: @width1-@width2;
+  }
+}
+
+//三列左侧自适应布局
+.@{ns}al3(@width1, @width2) {
+  &-right-1 {
+    float: right;
+    width: @width1;
+  }
+  &-right-2 {
+    float: right;
+    width: @width2;
+  }
+  &-left {
+    float: left;
+    width: 100%;
+    margin-right: -@width1-@width2;
+  }
+  &-right-content {
+    margin-right: @width1-@width2;
+  }
+}
