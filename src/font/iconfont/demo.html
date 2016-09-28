@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>IconFont</title>
+    <link rel="stylesheet" href="demo.css">
+    <link rel="stylesheet" href="iconfont.css">
+</head>
+<body>
+    <div class="main">
+        <h1>IconFont 图标</h1>
+        <ul class="icon_lists clear">
+            
+                <li>
+                <i class="icon iconfont">&#xf01b1;</i>
+                    <div class="name">3.1选择</div>
+                    <div class="code">&amp;#xf01b1;</div>
+                    <div class="fontclass">.31xuanze</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xf01b0;</i>
+                    <div class="name">3.1关闭</div>
+                    <div class="code">&amp;#xf01b0;</div>
+                    <div class="fontclass">.31guanbi</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xf0221;</i>
+                    <div class="name">3.1 下拉</div>
+                    <div class="code">&amp;#xf0221;</div>
+                    <div class="fontclass">.31xiala</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xf021f;</i>
+                    <div class="name">3.1 收起</div>
+                    <div class="code">&amp;#xf021f;</div>
+                    <div class="fontclass">.31shouqi</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xf0223;</i>
+                    <div class="name">3.1 返回1</div>
+                    <div class="code">&amp;#xf0223;</div>
+                    <div class="fontclass">.31fanhui1</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xf0224;</i>
+                    <div class="name">3.1 返回2</div>
+                    <div class="code">&amp;#xf0224;</div>
+                    <div class="fontclass">.31fanhui2</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xf0121;</i>
+                    <div class="name">三角2</div>
+                    <div class="code">&amp;#xf0121;</div>
+                    <div class="fontclass">.sanjiao2</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xf0122;</i>
+                    <div class="name">三角1</div>
+                    <div class="code">&amp;#xf0122;</div>
+                    <div class="fontclass">.sanjiao1</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xf0123;</i>
+                    <div class="name">三角4</div>
+                    <div class="code">&amp;#xf0123;</div>
+                    <div class="fontclass">.sanjiao4</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xf0124;</i>
+                    <div class="name">三角3</div>
+                    <div class="code">&amp;#xf0124;</div>
+                    <div class="fontclass">.sanjiao3</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xf0115;</i>
+                    <div class="name">返回1</div>
+                    <div class="code">&amp;#xf0115;</div>
+                    <div class="fontclass">.fanhui1</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xf0116;</i>
+                    <div class="name">返回2</div>
+                    <div class="code">&amp;#xf0116;</div>
+                    <div class="fontclass">.fanhui2</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xf0117;</i>
+                    <div class="name">返回3</div>
+                    <div class="code">&amp;#xf0117;</div>
+                    <div class="fontclass">.fanhui3</div>
+                </li>
+            
+                <li>
+                <i class="icon iconfont">&#xf0118;</i>
+                    <div class="name">返回4</div>
+                    <div class="code">&amp;#xf0118;</div>
+                    <div class="fontclass">.fanhui4</div>
+                </li>
+            
+        </ul>
+
+
+        <div class="helps">
+            第一步：使用font-face声明字体
+            <pre>
+@font-face {font-family: 'iconfont';
+    src: url('iconfont.eot'); /* IE9*/
+    src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('iconfont.woff') format('woff'), /* chrome、firefox */
+    url('iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+</pre>
+第二步：定义使用iconfont的样式
+            <pre>
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}
+</pre>
+第三步：挑选相应图标并获取字体编码，应用于页面
+<pre>
+&lt;i class="iconfont"&gt;&amp;#x33;&lt;/i&gt;
+</pre>
+        </div>
+
+    </div>
+</body>
+</html>

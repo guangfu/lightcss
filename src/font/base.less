@@ -1,0 +1,53 @@
+/*
+ * 通用字体类
+ */
+
+ //namespace命名空间
+@ns: icon-;
+
+@font-face {
+  font-family: "iconfont";
+  src: url('iconfont.eot?t=1475042159'); /* IE9*/
+  src: url('iconfont.eot?t=1475042159#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1475042159') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1475042159') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1475042159#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+//icon基础类
+.icon {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+//选择
+.@{ns}select:before { content: "\f01b1"; }
+//关闭
+.@{ns}close:before { content: "\f01b0"; }
+//下拉
+.@{ns}down:before { content: "\f0221"; }
+//收起
+.@{ns}up:before { content: "\f021f"; }
+//返回左
+.@{ns}left:before { content: "\f0223"; }
+//跳转右
+.@{ns}right:before { content: "\f0224"; }
+//三角上
+.@{ns}triangle-up:before { content: "\f0121"; }
+//三角下
+.@{ns}triangle-down:before { content: "\f0122"; }
+//三角左
+.@{ns}triangle-left:before { content: "\f0123"; }
+//三角右
+.@{ns}triangle-right:before { content: "\f0124"; }
+//箭头左
+.@{ns}arrow-left:before { content: "\f0115"; }
+//箭头右
+.@{ns}arrow-right:before { content: "\f0116"; }
+// 箭头上
+.@{ns}arrow-up:before { content: "\f0117"; }
+// 箭头下
+.@{ns}arrow-down:before { content: "\f0118"; }
