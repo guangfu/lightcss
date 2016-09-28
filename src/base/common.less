@@ -34,14 +34,14 @@
 
 // 隐藏元素，但是对屏幕阅读器可用
 .@{ns}visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
 // 隐藏元素
@@ -55,9 +55,6 @@
   background-color: #f4f4f4;
   background-repeat: no-repeat;
   border: 0;
-  direction: ltr;
-  display: block;
-  overflow: hidden;
   text-align: left;
   text-indent: -999em;
 }
@@ -80,4 +77,75 @@
   text-align: justify;
   text-align: end;
   text-align-last: justify;
+}
+
+// 设置圆形
+.@{ns}radius {
+  border-radius: 50%;
+}
+
+//flex居中
+.@{ns}flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+//flex水平居中
+.@{ns}flex-h-center {
+  display: flex;
+  align-items: center;
+}
+
+//flex垂直居中
+.@{ns}flex-v-center {
+  display: flex;
+  justify-content: center;
+}
+
+//绝对定位垂直居中，需知道盒子的高度或者宽度
+.@{ns}center {
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+  resize:both; //用于设置了所有除overflow为visible的元素
+  overflow:auto;
+}
+
+//fixed居中
+.@{ns}fixed-center {
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+  resize:both; //用于设置了所有除overflow为visible的元素
+  overflow:auto;
+}
+
+//水平居中
+.@{ns}h-center {
+  margin-left: 0;
+  margin-right: 0;
+  display: block;
+}
+
+//垂直居中
+.@{ns}v-center {
+  display:block;
+
+  &:after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+  }
+  &-content {
+    display:inline-block;
+    vertical-align:middle;
+  }
 }
