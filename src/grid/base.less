@@ -2,7 +2,9 @@
  * 通用布局类
  */
 
- //namespace命名空间
+//namespace命名空间
+.namespace() {
+
 @ns: g-;
 
 .generate-columns(24);
@@ -10,33 +12,36 @@
 .generate-columns(@total, @i: 1) when (@i =< @total) {
   .@{ns}col-@{i}-@{total} {
     width: (@i * 100% / @total);
-    display: inline-block;
-    font-size: 16px;
-    vertical-align: top;
   }
   .generate-columns(@total, (@i + 1));
+}
+
+.@{ns}row [class *= "@{ns}col-"] {
+  display: inline-block;
+  font-size: 16px;
+  vertical-align: top;
 }
 
 .@{ns}row {
   font-size: 0;
 }
 
-// 两列右侧自适应布局adaptive:a, r: right: l: left, m: middle
-.@{ns}ar(@width) {
-  &-left {
-    float:left;
-    width:@width;
-    margin-right:-@width;
-  }
-  &-right {
-    float:right;
-    width:100%
-  }
-  &-right-content {
-    margin-left:@width;
-  }
-}
-
+// 两列右侧自适应布局adaptive:a, r: right: l: left, m: middle, f: fixed
+// .@{ns}ar(@width) {
+//   &-left {
+//     float:left;
+//     width:@width;
+//     margin-right:-@width;
+//   }
+//   &-right {
+//     float:right;
+//     width:100%
+//   }
+//   &-right-content {
+//     margin-left:@width;
+//   }
+// }
+/**
 // 两列左侧自适应布局
 .@{ns}al(@width) {
   &-right {
@@ -76,7 +81,7 @@
 }
 
 //三列右侧自适应布局
-.@{ns}ar3(@width1, @width2) {
+.@{ns}arr(@width1, @width2) {
   &-left-1 {
     float: left;
     width: @width1;
@@ -96,7 +101,7 @@
 }
 
 //三列左侧自适应布局
-.@{ns}al3(@width1, @width2) {
+.@{ns}all(@width1, @width2) {
   &-right-1 {
     float: right;
     width: @width1;
@@ -114,3 +119,20 @@
     margin-right: @width1-@width2;
   }
 }
+
+//两列定宽
+.@{ns}flr(@left-width, @right-width) {
+  &-left {
+    float: left;
+    width: @left-width;
+  }
+  &-right {
+    float: right;
+    width: @right-width;
+  }
+}
+
+*/
+}
+
+.namespace();

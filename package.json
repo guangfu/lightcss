@@ -1,0 +1,34 @@
+{
+  "name": "lightcss",
+  "version": "1.0.0",
+  "description": "轻巧简便的css框架",
+  "main": "Gulpfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp build",
+    "dev": "gulp dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guangfu/lightcss.git"
+  },
+  "keywords": [
+    "css",
+    "light"
+  ],
+  "author": "吴光富",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/guangfu/lightcss/issues"
+  },
+  "homepage": "https://github.com/guangfu/lightcss#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-less": "^3.1.0",
+    "gulp-plumber": "^1.1.0"
+  }
+}

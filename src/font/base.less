@@ -2,9 +2,6 @@
  * 通用字体类
  */
 
- //namespace命名空间
-@ns: icon-;
-
 @font-face {
   font-family: "iconfont";
   src: url('iconfont.eot?t=1475042159'); /* IE9*/
@@ -14,6 +11,10 @@
   url('iconfont.svg?t=1475042159#iconfont') format('svg'); /* iOS 4.1- */
 }
 
+//namespace命名空间
+.namespace() {
+
+@ns: icon-;
 //icon基础类
 .icon {
   font-family:"iconfont" !important;
@@ -51,3 +52,7 @@
 .@{ns}arrow-up:before { content: "\f0117"; }
 // 箭头下
 .@{ns}arrow-down:before { content: "\f0118"; }
+
+}
+
+.namespace();
