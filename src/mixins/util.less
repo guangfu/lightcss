@@ -1,0 +1,33 @@
+/**
+* 辅助mixin，提供常用的mixin方法
+*/
+
+// background-size属性兼容IE8
+.bgSize(@size) {
+  background-size: @size;
+  -ms-behavior: url('../backgroundsize.min.htc');
+  behavior: url('../backgroundsize.min.htc');
+}
+
+//设置小于12px的字体，兼容chrome
+.zoomin(@size) when(@size < 12) {
+  font-size: 12px;
+  transform : scale(@size / 12) ;
+  *font-size: @size;  //兼容IE8
+}
+
+//设置input输入框占位文字的颜色
+.input-placeholder(@color) {
+  &::-webkit-input-placeholder { /* WebKit browsers */ 
+    color: @color;
+  } 
+  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+    color: @color;
+  } 
+  &::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+    color: @color;
+  } 
+  &:-ms-input-placeholder { /* Internet Explorer 10+ */ 
+    color: @color;
+  } 
+}

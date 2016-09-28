@@ -90,22 +90,6 @@ textarea[contenteditable] {
   -webkit-appearance: none;
 }
 
-/*
- * Image replacement
- */
-
-.ir {
-    background-color: transparent;
-    background-repeat: no-repeat;
-    border: 0;
-    direction: ltr;
-    display: block;
-    overflow: hidden;
-    text-align: left;
-    text-indent: -999em;
-}
-
-
 
 
 

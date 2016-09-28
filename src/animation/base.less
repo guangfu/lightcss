@@ -1,0 +1,48 @@
+/*
+ * 通用动画类
+ */
+
+
+//namespace命名空间
+@ns: a-;
+
+//悬浮上滑动画，带box阴影
+.@{ns}image-slide {
+  transition: transform 0.2s linear;
+  &:hover {
+    transform: translate3d(0, -2px, 0);
+    box-shadow: 0 1px 5px 1px #bbb;
+  }
+}
+
+//悬浮放大动画
+.@{ns}image-scale {
+  transition: transform .4s ease-out;
+  &:hover {
+    transform: scale(1.05,1.05);
+  }
+}
+
+//悬浮上滑动画，不带box影响
+.@{ns}text-slide {
+  transition: transform 0.2s linear;
+  &:hover {
+    transform: translate3d(0, -2px, 0);
+  }
+}
+
+//文字土豪金高亮
+.@{ns}text-highlight {
+  transition: color 0.2s linear;
+  &:hover {
+    color: @Chighlight !important;
+  }
+}
+
+//文字链接橙高亮
+.@{ns}link-highlight {
+  transition: color 0.2s linear;
+  &:hover {
+    color: @ClinkOrange !important;
+  }
+}

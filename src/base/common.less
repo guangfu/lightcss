@@ -2,7 +2,7 @@
  * 基础通用类
  */
 
-//namespace
+//namespace命名空间
 @ns: c-;
 
 // 禁止调用系统默认菜单
@@ -51,3 +51,33 @@
 }
 
 //图片占位图
+.@{ns}placeholder {
+  background-color: #f4f4f4;
+  background-repeat: no-repeat;
+  border: 0;
+  direction: ltr;
+  display: block;
+  overflow: hidden;
+  text-align: left;
+  text-indent: -999em;
+}
+
+//超出单行截断并显示省略号
+.@{ns}ellipsis {
+  white-space:nowrap; 
+  overflow:hidden; 
+  text-overflow:ellipsis;
+}
+
+//超出单行截断
+.@{ns}truncate {
+  white-space:nowrap; 
+  overflow:hidden; 
+}
+
+//多行首尾对齐
+.@{ns}justify {
+  text-align: justify;
+  text-align: end;
+  text-align-last: justify;
+}
