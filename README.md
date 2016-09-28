@@ -11,4 +11,4 @@
 
 ## 编译
 
-`npm start`
+`npm run build`
