@@ -1,0 +1,111 @@
+/*
+ * 在normalize基础上进一步reset，以满足自定义reset需求
+ */
+
+* { 
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box; 
+  box-sizing: border-box; 
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+html {
+  font-family: SimHei, "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body {
+  font-size: 1em;
+  line-height: 1;
+}
+
+a {
+  color: #00e;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #551a8b;
+}
+
+a:hover {
+  color: #06e;
+}
+
+ul,ol,li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+i,em {
+  font-style: normal;
+}
+
+h1,h2,h3,h4,h5,h6,p { 
+  margin: 0; 
+  font-weight: normal;
+}
+
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+img {
+  vertical-align: middle;
+  width: 100%;
+  height: auto;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical;
+}
+
+/* A hack for HTML5 contenteditable attribute on mobile */
+
+textarea[contenteditable] {
+  -webkit-appearance: none;
+}
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 0;
+    direction: ltr;
+    display: block;
+    overflow: hidden;
+    text-align: left;
+    text-indent: -999em;
+}
+
+
+
+
+

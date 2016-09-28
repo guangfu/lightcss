@@ -1,0 +1,53 @@
+/*
+ * 基础通用类
+ */
+
+//namespace
+@ns: c-;
+
+// 禁止调用系统默认菜单
+.@{ns}nocallout {
+  -webkit-touch-callout: none;
+}
+
+// 禁止选择复制
+.@{ns}noselect {
+  user-select: none;
+}
+
+// 点击高亮
+.@{ns}tabhighlight {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+}
+
+// 清除浮动
+.@{ns}clear {
+  &:after,
+  &:before {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// 隐藏元素，但是对屏幕阅读器可用
+.@{ns}visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+// 隐藏元素
+.@{ns}hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+//图片占位图
