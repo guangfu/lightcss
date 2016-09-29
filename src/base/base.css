@@ -19,10 +19,6 @@ textarea {
 html {
   font-family: SimHei, "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
 }
 
 body {

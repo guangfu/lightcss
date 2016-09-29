@@ -1,5 +1,5 @@
 # lightcss
-轻巧简便的css框架
+轻巧简便的模块化css框架
 
 ## 下载
 
@@ -8,6 +8,10 @@
 ## 安装
 
 `npm install`
+
+## 开发
+
+`npm start`
 
 ## 编译
 

@@ -38,3 +38,109 @@
   filter:gray;/* IE6-9 */ 
   filter: grayscale(1);/* W3C */ 
 }
+
+// 两列右侧自适应布局adaptive:a, r: right: l: left, m: middle, f: fixed
+.layout-ar(@width) {
+  &-left {
+    float:left;
+    width:@width;
+    margin-right:-@width;
+  }
+  &-right {
+    float:right;
+    width:100%
+  }
+  &-right-content {
+    margin-left:@width;
+  }
+}
+
+// 两列左侧自适应布局
+.layout-al(@width) {
+  &-right {
+    float:right;
+    width:@width;
+    margin-left:-@width;
+  }
+  &-left {
+    float:left;
+    width:100%
+  }
+  &-right-content {
+    margin-right:@width;
+  }
+}
+
+//三列中间自适应布局
+.layout-am(@left-width, @right-width) {
+  &-left {
+    float: left;
+    width: @left-width;
+    margin-right: -@left-width;
+  }
+  &-right {
+    float: right;
+    width: @right-width;
+    margin-left: -@right-width;
+  }
+  &-middle {
+    width: 100%;
+    float: left;
+  }
+  &-middle-content {
+    margin-left: @left-width;
+    margin-right: @right-width;
+  }
+}
+
+//三列右侧自适应布局
+.layout-arr(@width1, @width2) {
+  &-left-1 {
+    float: left;
+    width: @width1;
+  }
+  &-left-2 {
+    float: left;
+    width: @width2;
+  }
+  &-right {
+    float: right;
+    width: 100%;
+    margin-left: -@width1-@width2;
+  }
+  &-right-content {
+    margin-left: @width1-@width2;
+  }
+}
+
+//三列左侧自适应布局
+.layout-all(@width1, @width2) {
+  &-right-1 {
+    float: right;
+    width: @width1;
+  }
+  &-right-2 {
+    float: right;
+    width: @width2;
+  }
+  &-left {
+    float: left;
+    width: 100%;
+    margin-right: -@width1-@width2;
+  }
+  &-right-content {
+    margin-right: @width1-@width2;
+  }
+}
+
+//两列定宽
+.layout-flr(@left-width, @right-width) {
+  &-left {
+    float: left;
+    width: @left-width;
+  }
+  &-right {
+    float: right;
+    width: @right-width;
+  }
+}

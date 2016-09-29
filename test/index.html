@@ -3,8 +3,65 @@
 <head>
     <meta charset="utf-8"/>
     <title>IconFont</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../dist/lightcss.css">
+    <style>
+      body {
+        margin: 20px;
+        line-height: 2;
+      }
+      h1 {
+        font-size: 20px;
+      }
+      h2 {
+        font-size: 18px;
+      }
+      .gray {
+        background: gray;
+        color: white;
+      }
+      .black {
+        background: black;
+        color: white;
+      }
+      [class*="g-col-"] {
+        height: 100px;
+      }
+    </style>
 </head>
 <body>
-  </body>
+  <section>
+    <h1>栅格布局</h1>
+    <h2>两列</h2>
+    <div class="g-row">
+      <div class="g-col-12-24 gray"></div>
+      <div class="g-col-12-24 black"></div>
+    </div>
+    <h2>三列</h2>
+    <div class="g-row">
+      <div class="g-col-8-24 gray"></div>
+      <div class="g-col-8-24 black"></div>
+      <div class="g-col-8-24 gray"></div>
+    </div>
+    <h2>换行</h2>
+    <div class="g-row">
+      <div class="g-col-8-24 gray">1</div>
+      <div class="g-col-8-24 black" style="height: 120px;">2</div>
+      <div class="g-col-8-24 gray">3</div>
+      <div class="g-col-8-24 black">4</div>
+      <div class="g-col-8-24 gray">5</div>
+      <div class="g-col-8-24 black">6</div>
+    </div>
+    <h2>换行2</h2>
+    <div class="g-row">
+      <div class="g-col-12-24">
+        <div class="gray" style="height: 150px;">a</div>
+        <div class="black">a</div>
+      </div>
+      <div class="g-col-12-24">
+        <div class="black">a</div>
+        <div class="gray">a</div>        
+      </div>      
+    </div>
+  </section>
+</body>
 </html>

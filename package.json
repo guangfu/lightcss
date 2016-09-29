@@ -1,7 +1,7 @@
 {
   "name": "lightcss",
   "version": "1.0.0",
-  "description": "轻巧简便的css框架",
+  "description": "轻巧简便的模块化css框架",
   "main": "Gulpfile.js",
   "directories": {
     "test": "test"
@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp build",
-    "dev": "gulp dev"
+    "start": "gulp dev"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,8 @@
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-less": "^3.1.0",
-    "gulp-plumber": "^1.1.0"
+    "gulp-minify-css": "^1.2.4",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2"
   }
 }
