@@ -8,21 +8,21 @@ const rename = require("gulp-rename");
 gulp.task('build', () => {
 
   return gulp.src('src/lightcss.less')
-		  	.pipe(plumber())
-		    .pipe(less())
-		    .pipe(autoprefixer())
-		    .pipe(gulp.dest('dist'))
-				.pipe(minifycss())
-				.pipe(rename({ suffix: ".min" }))
-				.pipe(gulp.dest('dist'));
+	     .pipe(plumber())
+	     .pipe(less())
+	     .pipe(autoprefixer())
+	     .pipe(gulp.dest('dist'))
+	     .pipe(minifycss())
+	     .pipe(rename({ suffix: ".min" }))
+	     .pipe(gulp.dest('dist'));
 })
 
 gulp.task('dev', ['build'], () => {
   gulp.watch('src/**/*.less', () => {
-		return gulp.src('src/lightcss.less')
-					.pipe(plumber())
-					.pipe(less())
-					.pipe(autoprefixer())
-					.pipe(gulp.dest('dist'));
+    return gulp.src('src/lightcss.less')
+	       .pipe(plumber())
+	       .pipe(less())
+	       .pipe(autoprefixer())
+	       .pipe(gulp.dest('dist'));
 	})
 })
